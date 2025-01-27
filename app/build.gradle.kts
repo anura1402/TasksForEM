@@ -48,4 +48,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation (libs.rxjava)
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson) // Для работы с JSON
+    implementation (libs.rxandroid) // Для работы с RxJava в Android
+    implementation (libs.adapter.rxjava2)
+    implementation (libs.logging.interceptor)
 }
