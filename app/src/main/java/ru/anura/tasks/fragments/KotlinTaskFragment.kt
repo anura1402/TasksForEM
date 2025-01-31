@@ -6,12 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import ru.anura.tasks.databinding.ActivityMainBinding
 import ru.anura.tasks.databinding.FragmentKotlinTaskBinding
 import ru.anura.tasks.kotlin.TimeCacher
 import ru.anura.tasks.kotlin.findInt
 import ru.anura.tasks.kotlin.shakerSort
-import ru.anura.tasks.rxJava.RxJavaTasks
 import java.text.SimpleDateFormat
 import java.util.Locale
 

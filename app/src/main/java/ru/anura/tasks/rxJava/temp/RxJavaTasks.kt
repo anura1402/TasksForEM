@@ -1,14 +1,8 @@
-package ru.anura.tasks.rxJava
+package ru.anura.tasks.rxJava.temp
 
 import android.content.Context
 import android.util.Log
-import android.widget.Toast
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.schedulers.Schedulers
 import io.reactivex.rxjava3.subjects.ReplaySubject
-import ru.anura.tasks.rxJava.network.ApiClient
-import java.util.concurrent.TimeUnit
 
 class RxJavaTasks {
     companion object{
@@ -31,11 +25,11 @@ class RxJavaTasks {
 //                .subscribe {
 //                    Log.d("HAHAHA", "subscribeThread = ${Thread.currentThread().name}")
 //                }
-//            val subject = ReplaySubject.create<String>()
-//            subject.onNext("1")
-//            subject.onNext("2")
-//            subject.onNext("3")
-//            subject.subscribe { Log.d("HAHAHA", it) }
+            val subject = ReplaySubject.create<String>()
+            subject.onNext("1")
+            subject.onNext("2")
+            subject.onNext("3")
+            subject.subscribe { Log.d("HAHAHA", it) }
 
         }
     }
