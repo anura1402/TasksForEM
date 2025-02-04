@@ -1,5 +1,6 @@
 package ru.anura.tasks.fragments.android
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +31,8 @@ class FirstFragment: Fragment() {
             (activity as? RouterActivity)?.navigateTo(SecondFragment())
         }
         binding.btnPrevious1.setOnClickListener {
-            (activity as? RouterActivity)?.navigateTo(MenuFragment())
+            val intent = Intent(requireActivity(), RouterActivity::class.java)
+            startActivity(intent)
         }
     }
 
