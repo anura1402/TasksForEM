@@ -32,12 +32,21 @@ class RouterActivity : AppCompatActivity() {
         Log.d("AndTest", "onCreate Router")
 
         binding.buttonFragments.setOnClickListener {
+            binding.rectangeView.isVisible = false
             navigateTo(FirstFragment())
         }
+        taskWithWorkManager()
 
+        binding.buttonRectangle.setOnClickListener {
+            binding.rectangeView.isVisible = true
+        }
+    }
+
+
+    private fun taskWithWorkManager() {
         val filter = IntentFilter(Intent.ACTION_POWER_CONNECTED)
         val batteryManager =
-            applicationContext.getSystemService(Context.BATTERY_SERVICE) as BatteryManager
+            applicationContext.getSystemService(BATTERY_SERVICE) as BatteryManager
 
         binding.buttonWorkManager.setOnClickListener {
             val workManager = WorkManager.getInstance(applicationContext)
